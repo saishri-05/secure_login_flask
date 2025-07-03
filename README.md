@@ -88,3 +88,59 @@ python app.py
 Then open your browser and go to:
 http://127.0.0.1:5000
 
+
+🎨 Custom Styling with External CSS
+This project uses a separate styles.css file to apply custom styling to the HTML pages alongside Bootstrap.
+
+📁 Location
+The CSS file is stored in the static/ folder:
+
+cpp
+Copy
+Edit
+secure_login_flask/
+├── static/
+│   └── styles.css
+📎 How It's Linked
+The stylesheet is linked in the HTML through the layout.html file using Flask’s url_for:
+
+html
+Copy
+Edit
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+✨ Styling Highlights
+Here are a few customizations added in styles.css:
+
+Light background color for the page
+
+Centered and padded form container with shadow
+
+Full-width styled buttons
+
+Consistent font and margin spacing
+
+css
+Copy
+Edit
+body {
+  background-color: #f0f2f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-container {
+  max-width: 420px;
+  margin: 100px auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.btn {
+  width: 100%;
+}

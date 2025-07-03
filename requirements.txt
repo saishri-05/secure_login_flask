@@ -1,0 +1,6 @@
+Flask
+Flask-PyMongo
+Flask-Limiter
+bcrypt
+python-dotenv
+PyJWT

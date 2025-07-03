@@ -1,0 +1,21 @@
+<!-- templates/register.html -->
+{% extends "layout.html" %}
+{% block content %}
+<h2>Register</h2>
+<form method="POST" action="/register">
+  <div class="mb-3">
+    <label>Username</label>
+    <input type="text" class="form-control" name="username" required>
+  </div>
+  <div class="mb-3">
+    <label>Email</label>
+    <input type="email" class="form-control" name="email" required>
+  </div>
+  <div class="mb-3">
+    <label>Password</label>
+    <input type="password" class="form-control" name="password" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Register</button>
+</form>
+<a href="/login" class="btn btn-link mt-3">Already have an account? Login</a>
+{% endblock %}
